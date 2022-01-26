@@ -1,0 +1,22 @@
+body {
+    padding: 0;
+    margin: 0;
+
+}
+html, body, #map {
+    height: 100%;
+    width:auto;
+} 
+header{
+    height:3vh;
+    width: fit-content;
+    display: flex;
+    flex-direction:row;
+    font-size: 1rem;
+    
+}
+
+#search{
+    width: 70vw;
+    
+}
