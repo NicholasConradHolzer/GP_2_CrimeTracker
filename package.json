@@ -4,7 +4,8 @@
   "description": "A tracker for crime uploads by civilian source blended with law enforcement data",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm start"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,10 @@
     "dotenv": "^14.3.2",
     "express": "^4.17.2",
     "express-handlebars": "^6.0.2",
+<<<<<<< HEAD
     "express-session": "^1.17.2",
+=======
+>>>>>>> 3a6e0a426098d9d7b382190a72ec6804436b79e5
     "request": "^2.88.2",
     "sequelize": "^6.14.1"
   },
