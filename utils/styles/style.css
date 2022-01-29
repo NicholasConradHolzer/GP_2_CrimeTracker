@@ -1,0 +1,56 @@
+
+header {
+  height: 3vh;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1rem;
+}
+
+header #search {
+  width: 70vw;
+}
+
+html {
+  height: 100%;
+  width: auto;
+}
+
+html body {
+  height: 100%;
+  width: auto;
+  padding: 0;
+  margin: 0;
+}
+
+html body #map {
+  height: 100%;
+  width: auto;
+  -webkit-box-shadow: 5px 15px 20px black;
+          box-shadow: 5px 15px 20px black;
+}
+
+html body footer {
+  height: 3vh;
+  width: auto;
+  background-color: black;
+}
+
+html body footer ul {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+html body footer ul .fas {
+  color: #0044ff;
+}
+/*# sourceMappingURL=style.css.map */

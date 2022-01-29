@@ -1,0 +1,50 @@
+
+$primaryColor:black;
+$secondaryColor: rgb(0, 68, 255);
+
+@mixin heightXWidth{
+    height: 100%;
+    width:auto;  
+} 
+
+
+header{
+    height:3vh;
+    width: fit-content;
+    flex-direction:row;
+    display: flex;
+    font-size: 1rem;   
+
+    #search{
+        width: 70vw;   
+}
+}
+
+html{
+   @include heightXWidth;
+   
+   body {
+    @include heightXWidth;
+       padding: 0;
+       margin: 0;      
+       
+       
+       #map{
+           @include heightXWidth;
+           box-shadow: 5px 15px 20px $primaryColor;
+        }
+          
+        footer{  height:3vh;
+            width: auto;
+            background-color: $primaryColor;
+   
+            ul{
+                    flex-direction:column;
+                    
+                    .fas{
+                        color:$secondaryColor;
+                    }
+                }
+            }
+        }
+    } 

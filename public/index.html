@@ -5,12 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/utils/styles/style.css">
+    <!--tailWind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- leaflet css -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    <link rel=" stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
         crossorigin="" />
+
+    <!-- font icon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <title>Document</title>
 </head>
 
@@ -19,24 +24,55 @@
         <input type="text" placeholder="Enter location" id="search">
         <input type="button" value="search" id="searchBtn">
         <!--display date-fns here-->
-
     </header>
 
 
-    <div id="map"></div>
 
 
+    <div id="map">
+
+        <aside>
+
+            <nav>
+                <ul>
+
+                    <li class="navIcon">
+                        <a href="#">
+                            <i class="fas fa-home"></i>
+                        </a>
+                    </li>
+
+                    <li class="navIcon">
+                        <a href="#">
+                            <i class="fas fa-signal"></i>
+                        </a>
+                    </li>
+
+                    <li class="navIcon">
+                        <a href="#">
+                            <i class="fas fa-comments"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
 
 
-
-
+    </div>
 
 </body>
 
 </html>
+
 <!-- leaflet js -->
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
+
+<!-- leaflet sideBar js -->
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/Turbo87/sidebar-v2@v0.4.0/js/ol3-sidebar.js"></script> -->
+
+<!-- chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
 
 <script src="map.js"></script>
