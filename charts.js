@@ -3,14 +3,14 @@
 async function getCrimeData() {
     const apiUrl = ""
     const response = await fetch(apiUrl)
-    const barChartData = await response.json()
+    const lineChartData = await response.json()
 
-    const crimeType = barChartData.map(  (x) => x.crime_committed)
-    const dateCrime = barChartData.map((x) => x.comitted_date)
+    const crimeType = lineChartData.map(  (x) => x.crime_committed)
+    const dateCrime = lineChartData.map((x) => x.comitted_date)
     
 
 
-    console.log(barChartData)
+    console.log(lineChartData)
 }
 getCrimeData()
 
