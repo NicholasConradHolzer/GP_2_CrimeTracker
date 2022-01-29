@@ -5,6 +5,7 @@ $secondaryColor: rgb(0, 110, 255);
 @mixin grid-rows{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr ;
+    gap: 10rem;
     
 }
 @mixin grid-columns{
@@ -43,10 +44,13 @@ html{
 
 
 main{
-
+display: grid;
+place-items: center;
+text-align: center;
+gap: 2rem;
     #map{
         height: 40vh;
-        width:40vw;
+        width:80vw;
         box-shadow: 5px 15px 20px $primaryColor;
         
     }

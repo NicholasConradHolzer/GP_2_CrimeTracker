@@ -27,13 +27,22 @@ html body {
   display: grid;
   -ms-grid-rows: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
+  gap: 10rem;
   padding: 0;
   margin: 0;
 }
 
+html main {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
 html main #map {
   height: 40vh;
-  width: 40vw;
+  width: 80vw;
   -webkit-box-shadow: 5px 15px 20px black;
           box-shadow: 5px 15px 20px black;
 }
