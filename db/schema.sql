@@ -2,4 +2,9 @@
 
 -- CREATE DATABASE userprofiles;
 
--- Initiate once 'seed' plug has been established
+-- DROP DATABASE IF EXISTS usermapmark;
+
+-- CREATE DATABASE usermamark;
+
+
+-- Initiate in TESTING once 'seed' plug has been established
