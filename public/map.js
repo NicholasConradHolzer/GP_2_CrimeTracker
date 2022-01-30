@@ -47,9 +47,10 @@ if (navigator.geolocation) {
 
         map.on('click', onMapClick);
 
+        {
         var request = new XMLHttpRequest()
 
-        request.open('GET', `https://api.crimeometer.com/v2/crime-incidents-by-city?datetime_ini=2020-12-01T15:53:00.000Z&datetime_end=2021-01-10T15:00:00.000Z&citykey=BNA`);
+        //request.open('GET', `https://api.crimeometer.com/v2/incidents/stats?lat=${lat}&lon=${lon}&distance=10mi&datetime_ini=2022-01-01T00:00:00.000Z&datetime_end=2022-01-31T23:59:59.000Z`);
         
         request.setRequestHeader('Content-Type', 'application/json');
         request.setRequestHeader('x-api-key', 'oXdb7FwF7O8ERBkdefWIn4qI2ouOUX2i1jr5lIyf');
@@ -59,10 +60,12 @@ if (navigator.geolocation) {
             console.log('Status:', this.status);
             console.log('Headers:', this.getAllResponseHeaders());
             console.log('Body:', this.responseText);
-          }
+         }
         };
         
         request.send();
+
+    }
 
 
     })
