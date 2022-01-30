@@ -34,5 +34,9 @@
     "enforcement",
     "maps",
     "tracker"
-  ]
+  ],
+  "devDependencies": {
+    "postcss": "^8.4.5",
+    "tailwind-sass": "^1.0.0"
+  }
 }
