@@ -1,6 +1,5 @@
 const Post = require('./Post');
 const Comment = require('./Comment');
-const User = require('./User');
 
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
@@ -49,12 +48,15 @@ User.init(
         hooks: {
           // set up beforeCreate lifecycle "hook" functionality
           async beforeCreate(newUserData) {
-        //     bcrypt.hash(myPlaintextPassword, saltRounds).then(function(hash) {
-        //   },
             newUserData.password = await bcrypt.hash(newUserData.password, 10);
             return newUserData;
+        //     bcrypt.hash(myPlaintextPassword, saltRounds).then(function(hash) {
+            //   },
+            // beforeCreate(userData) {
+            // return bcrypt.hash(userData.password, 10).then(newUserData => {
+            //   return newUserData
+            // });
           },
-    
           async beforeUpdate(updatedUserData) {
             updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
             return updatedUserData;
