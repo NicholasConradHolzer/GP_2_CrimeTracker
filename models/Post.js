@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require("sequelize"); /* sequelize/dist */
 const sequelize = require('../config/connection');
-const User = require('./User');
+// const User = require('./User');
 
 class Post extends Model {
     static upvote(body, models) {
