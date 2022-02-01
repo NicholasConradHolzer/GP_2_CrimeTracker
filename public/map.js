@@ -67,10 +67,8 @@ if (navigator.geolocation) {
 
                     console.log('Headers:', this.getAllResponseHeaders());
                     console.log('Body:', this.responseText);
-                    let test = this.responseText
-                    console.log('test:', test.Body);
-                    arr = Object.keys(this.responseText)
-                    console.log('incident:', arr.toString)
+                    let test = JSON.parse(this.response)
+                    console.log('test:', test);
 
                 }
                 if (xhr.status == 404) {
