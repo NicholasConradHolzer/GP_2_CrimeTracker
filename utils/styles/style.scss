@@ -10,7 +10,7 @@ $secondaryColor: rgb(0, 110, 255);
 }
 @mixin grid-columns{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     place-items: center;
 }
 
@@ -18,18 +18,14 @@ $secondaryColor: rgb(0, 110, 255);
     height: 100%;
     width:auto;  
 } 
-@mixin navHxW{ height:10vh;
-    width: auto;
-    
-}
 
 header{
     height:3vh;
     width: fit-content;
     @include grid-columns;
     font-size: 1rem;   
-    #search{
-        width: 70vw;   
+    #searchBar{
+        width: 30vw;   
 }
 }
 
@@ -54,11 +50,13 @@ gap: 2rem;
         box-shadow: 5px 15px 20px $primaryColor;
         
     }
-              
+     
+    
+
     } 
 
-    nav{ @include navHxW;
-
+    nav{  height:10vh;
+        width: auto;
         background-color: $primaryColor;
 
         ul{        @include grid-columns;
