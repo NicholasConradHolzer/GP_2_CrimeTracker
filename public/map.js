@@ -3,8 +3,8 @@
 
 
 //change map view on search
-const search = document.getElementById('search')
-search.value
+const searchBar = document.getElementById('searchBar')
+searchBar.value
 //change map size
 // const expand = document.getElementsByClassName('expand')
 // expand
@@ -55,7 +55,7 @@ if (navigator.geolocation) {
 
 
 
-        const xhr = new XMLHttpRequest()
+        // const xhr = new XMLHttpRequest()
         xhr.open('GET', `https://api.crimeometer.com/v2/incidents/stats?lat=${lat}&lon=${lon}&distance=10mi&datetime_ini=2022-01-01T00:00:00.000Z&datetime_end=2022-01-31T23:59:59.000Z`, true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.setRequestHeader('x-api-key', 'oXdb7FwF7O8ERBkdefWIn4qI2ouOUX2i1jr5lIyf');
@@ -66,9 +66,8 @@ if (navigator.geolocation) {
                 if (xhr.status == 200) {
 
                     console.log('Headers:', this.getAllResponseHeaders());
-                    console.log('Body:', this.responseText);
                     let test = JSON.parse(this.response)
-                    console.log('test:', test);
+                    console.log('BODY:', test);
 
                 }
                 if (xhr.status == 404) {
@@ -87,5 +86,4 @@ if (navigator.geolocation) {
 };
 
 
-console.log(`theft:,Shoplifting,"Counterfeiting/Forgery,Fondling,Rape,Drunkenness,Aggravated Assault,Burglary/Breaking & Entering,,,,,,`);
 //exports = {lat,lon};
