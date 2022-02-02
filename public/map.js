@@ -2,6 +2,7 @@
 // import getOverlappingDaysInIntervals from "date-fns/getOverlappingDaysInIntervals";
 
 
+
 //change map view on search
 const searchBar = document.getElementById('searchBar')
 searchBar.value
@@ -55,7 +56,7 @@ if (navigator.geolocation) {
 
 
 
-        // const xhr = new XMLHttpRequest()
+        const xhr = new XMLHttpRequest()
         xhr.open('GET', `https://api.crimeometer.com/v2/incidents/stats?lat=${lat}&lon=${lon}&distance=10mi&datetime_ini=2022-01-01T00:00:00.000Z&datetime_end=2022-01-31T23:59:59.000Z`, true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.setRequestHeader('x-api-key', 'oXdb7FwF7O8ERBkdefWIn4qI2ouOUX2i1jr5lIyf');
@@ -68,6 +69,11 @@ if (navigator.geolocation) {
                     console.log('Headers:', this.getAllResponseHeaders());
                     let test = JSON.parse(this.response)
                     console.log('BODY:', test);
+                    test.forEach(IncedentType => {
+
+                        console.log(IncedentType[1])
+                    });
+                    console.log(Object.keys(test));
 
                 }
                 if (xhr.status == 404) {
@@ -78,6 +84,59 @@ if (navigator.geolocation) {
         };
 
         xhr.send();
+
+
+
+
+        https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js
+
+
+
+
+        // console.log(lineChartData)
+
+        // getCrimeData()
+
+        var ctx = document.getElementById('canvas').getContext('2d');
+        var mybarChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Theft', 'Assault', 'DUI', 'Drugs', 'Auto theft', 'Fraud'],
+                datasets: [{
+                    label: 'type of crime',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+
+
+
+
 
 
     })
